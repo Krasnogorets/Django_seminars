@@ -1,0 +1,200 @@
+INFO 2024-01-28 13:46:28,865 autoreload 55604 8320Watching for file changes with StatReloader
+INFO 2024-01-28 13:46:35,271 views 55604 63300������ 4
+ERROR 2024-01-28 13:46:35,325 log 55604 63300Internal Server Error: /rnd/dice/
+Traceback (most recent call last):
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2024-01-28 13:46:35,331 basehttp 55604 63300"GET /rnd/dice/ HTTP/1.1" 500 66857
+INFO 2024-01-28 13:48:05,829 autoreload 55596 66636Watching for file changes with StatReloader
+INFO 2024-01-28 13:48:09,206 basehttp 55596 54696"GET / HTTP/1.1" 200 13
+INFO 2024-01-28 13:48:21,287 views 55596 54696������ 3
+ERROR 2024-01-28 13:48:21,320 log 55596 54696Internal Server Error: /rnd/dice/
+Traceback (most recent call last):
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2024-01-28 13:48:21,320 basehttp 55596 54696"GET /rnd/dice/ HTTP/1.1" 500 66720
+INFO 2024-01-28 13:50:19,037 views 55596 54696������ 2
+ERROR 2024-01-28 13:50:19,048 log 55596 54696Internal Server Error: /rnd/dice/
+Traceback (most recent call last):
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2024-01-28 13:50:19,053 basehttp 55596 54696"GET /rnd/dice/ HTTP/1.1" 500 66857
+INFO 2024-01-28 13:52:10,633 autoreload 55596 66636D:\�������� GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 13:52:11,159 autoreload 62680 65520Watching for file changes with StatReloader
+INFO 2024-01-28 13:52:14,463 basehttp 62680 61904"GET / HTTP/1.1" 200 13
+INFO 2024-01-28 13:52:40,021 views 62680 61904������ 2
+ERROR 2024-01-28 13:52:40,058 log 62680 61904Internal Server Error: /rnd/dice/
+Traceback (most recent call last):
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\�������� GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2024-01-28 13:52:40,058 basehttp 62680 61904"GET /rnd/dice/ HTTP/1.1" 500 66720
+INFO 2024-01-28 13:55:00,934 autoreload 62680 65520D:\�������� GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 13:55:01,444 autoreload 58060 45128Watching for file changes with StatReloader
+INFO 2024-01-28 13:55:05,407 views 58060 53260������ 5
+INFO 2024-01-28 13:55:05,408 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:55:07,667 views 58060 53260������ 5
+INFO 2024-01-28 13:55:07,668 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:55:08,756 views 58060 53260������ 1
+INFO 2024-01-28 13:55:08,756 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:55:09,315 views 58060 53260������ 2
+INFO 2024-01-28 13:55:09,315 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:55:09,724 views 58060 53260������ 2
+INFO 2024-01-28 13:55:09,724 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:55:10,169 views 58060 53260������ 4
+INFO 2024-01-28 13:55:10,171 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:55:10,653 views 58060 53260������ 4
+INFO 2024-01-28 13:55:10,654 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:55:11,095 views 58060 53260������ 4
+INFO 2024-01-28 13:55:11,095 basehttp 58060 53260"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 13:58:10,563 autoreload 58060 45128D:\�������� GEEKBRAINS\DJANGO\prog\seminar\myproject\myproject\settings.py changed, reloading.
+INFO 2024-01-28 13:58:43,040 autoreload 59640 53144Watching for file changes with StatReloader
+INFO 2024-01-28 14:00:51,475 autoreload 59640 53144D:\�������� GEEKBRAINS\DJANGO\prog\seminar\myproject\myproject\settings.py changed, reloading.
+INFO 2024-01-28 14:00:52,119 autoreload 35932 59288Watching for file changes with StatReloader
+INFO 2024-01-28 14:01:29,362 autoreload 35932 59288D:\�������� GEEKBRAINS\DJANGO\prog\seminar\myproject\myproject\settings.py changed, reloading.
+INFO 2024-01-28 14:13:53,549 autoreload 65312 3500Watching for file changes with StatReloader
+INFO 2024-01-28 14:14:00,299 views 65312 56656выпало 5
+INFO 2024-01-28 14:14:00,299 basehttp 65312 56656"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:14:00,873 views 65312 56656выпало 4
+INFO 2024-01-28 14:14:00,873 basehttp 65312 56656"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:14:01,344 views 65312 56656выпало 6
+INFO 2024-01-28 14:14:01,345 basehttp 65312 56656"GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:14:20,653 autoreload 65312 3500D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\myproject\settings.py changed, reloading.
+INFO 2024-01-28 14:14:21,210 autoreload 63560 56992 Watching for file changes with StatReloader
+INFO 2024-01-28 14:14:40,599 views 63560 62600 выпало 5
+INFO 2024-01-28 14:14:40,599 basehttp 63560 62600 "GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:14:40,783 views 63560 62600 выпало 5
+INFO 2024-01-28 14:14:40,784 basehttp 63560 62600 "GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:14:41,063 views 63560 62600 выпало 6
+INFO 2024-01-28 14:14:41,063 basehttp 63560 62600 "GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:14:41,361 views 63560 62600 выпало 5
+INFO 2024-01-28 14:14:41,363 basehttp 63560 62600 "GET /rnd/dice/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:14:45,611 views 63560 62600 выпало 33
+INFO 2024-01-28 14:14:45,611 basehttp 63560 62600 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:14:46,803 views 63560 62600 выпало 10
+INFO 2024-01-28 14:14:46,803 basehttp 63560 62600 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:14:46,957 views 63560 62600 выпало 64
+INFO 2024-01-28 14:14:46,957 basehttp 63560 62600 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:14:47,250 views 63560 62600 выпало 84
+INFO 2024-01-28 14:14:47,250 basehttp 63560 62600 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:14:47,515 views 63560 62600 выпало 43
+INFO 2024-01-28 14:14:47,515 basehttp 63560 62600 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:14:47,832 views 63560 62600 выпало 97
+INFO 2024-01-28 14:14:47,834 basehttp 63560 62600 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:22:58,417 autoreload 63560 56992 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:22:58,978 autoreload 67448 25136 Watching for file changes with StatReloader
+INFO 2024-01-28 14:23:25,879 autoreload 67448 25136 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:23:26,401 autoreload 53684 61324 Watching for file changes with StatReloader
+INFO 2024-01-28 14:23:41,025 autoreload 53684 61324 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:23:41,710 autoreload 53484 37408 Watching for file changes with StatReloader
+INFO 2024-01-28 14:24:55,739 autoreload 53484 37408 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:24:56,408 autoreload 60296 65372 Watching for file changes with StatReloader
+INFO 2024-01-28 14:25:10,041 autoreload 60296 65372 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:25:10,544 autoreload 60680 61328 Watching for file changes with StatReloader
+INFO 2024-01-28 14:25:25,218 autoreload 60680 61328 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:25:25,804 autoreload 18220 53092 Watching for file changes with StatReloader
+INFO 2024-01-28 14:26:16,386 autoreload 18220 53092 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:26:16,941 autoreload 47540 63036 Watching for file changes with StatReloader
+INFO 2024-01-28 14:26:37,784 autoreload 47540 63036 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:26:38,377 autoreload 66580 5608 Watching for file changes with StatReloader
+INFO 2024-01-28 14:27:55,581 autoreload 66580 5608 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:27:56,169 autoreload 39472 67164 Watching for file changes with StatReloader
+INFO 2024-01-28 14:28:46,662 autoreload 39472 67164 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:28:47,201 autoreload 39888 61652 Watching for file changes with StatReloader
+INFO 2024-01-28 14:33:46,477 autoreload 39888 61652 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:33:47,012 autoreload 66068 65568 Watching for file changes with StatReloader
+INFO 2024-01-28 14:33:52,002 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:52,002 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:33:52,410 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:52,410 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:33:52,555 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:52,556 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:33:53,001 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:53,002 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:33:53,188 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:53,188 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:33:53,367 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:53,367 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:33:53,756 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:53,756 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:33:53,927 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:53,927 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:33:54,134 views 66068 64560  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:33:54,134 basehttp 66068 64560 "GET /rnd/rnd/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:35:18,709 autoreload 66068 65568 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:35:19,232 autoreload 64716 66344 Watching for file changes with StatReloader
+INFO 2024-01-28 14:35:23,075 views 64716 64184  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:35:23,076 basehttp 64716 64184 "GET /rnd/rnd/ HTTP/1.1" 200 0
+INFO 2024-01-28 14:35:23,246 views 64716 64184  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:35:23,247 basehttp 64716 64184 "GET /rnd/rnd/ HTTP/1.1" 200 0
+INFO 2024-01-28 14:35:24,742 views 64716 64184  функция rnd_ вернула <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO 2024-01-28 14:35:24,742 basehttp 64716 64184 "GET /rnd/rnd/ HTTP/1.1" 200 0
+INFO 2024-01-28 14:38:09,843 autoreload 64716 66344 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:38:10,377 autoreload 67528 39768 Watching for file changes with StatReloader
+INFO 2024-01-28 14:38:15,658 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 75'
+INFO 2024-01-28 14:38:15,659 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:38:16,486 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 67'
+INFO 2024-01-28 14:38:16,487 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:38:16,656 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 3'
+INFO 2024-01-28 14:38:16,657 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:38:16,906 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 86'
+INFO 2024-01-28 14:38:16,907 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:38:17,143 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 98'
+INFO 2024-01-28 14:38:17,145 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:38:17,341 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 78'
+INFO 2024-01-28 14:38:17,342 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:38:17,483 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 56'
+INFO 2024-01-28 14:38:17,485 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:38:17,622 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 50'
+INFO 2024-01-28 14:38:17,622 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:38:17,774 views 67528 63904  функция rnd_ вернула b'\xd0\xb2\xd1\x8b\xd0\xbf\xd0\xb0\xd0\xbb\xd0\xbe 4'
+INFO 2024-01-28 14:38:17,775 basehttp 67528 63904 "GET /rnd/rnd/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:40:46,720 autoreload 67528 39768 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:40:47,226 autoreload 50936 53772 Watching for file changes with StatReloader
+INFO 2024-01-28 14:41:30,550 autoreload 50936 53772 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:41:31,165 autoreload 61308 50532 Watching for file changes with StatReloader
+INFO 2024-01-28 14:42:12,441 autoreload 61308 50532 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-01-28 14:42:12,914 autoreload 48012 1408 Watching for file changes with StatReloader
+INFO 2024-01-28 14:42:18,365 views 48012 49704  функция rnd_ вернула выпало 57
+INFO 2024-01-28 14:42:18,366 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:42:18,505 views 48012 49704  функция rnd_ вернула выпало 25
+INFO 2024-01-28 14:42:18,507 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:42:18,731 views 48012 49704  функция rnd_ вернула выпало 81
+INFO 2024-01-28 14:42:18,733 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:42:18,922 views 48012 49704  функция rnd_ вернула выпало 2
+INFO 2024-01-28 14:42:18,923 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 14
+INFO 2024-01-28 14:42:19,127 views 48012 49704  функция rnd_ вернула выпало 98
+INFO 2024-01-28 14:42:19,128 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-01-28 14:42:19,343 views 48012 49704  функция rnd_ вернула выпало 51
+INFO 2024-01-28 14:42:19,344 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 15
