@@ -1,0 +1,26 @@
+{% extends 'blog_app/base.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+<h3>{{ article.title }}</h3>
+<p>{{ article.text }}</p>
+<table border="1">
+    <tr><td  width="400px"><p>Комментарий</p></td><td align="center" width="100px"><p>Автор</p></td>
+        <td align="center" width="200px"><p>Дата обновления</p></td>
+        <td align="center" width="150px"><p>статус обновления</p></td></tr>
+    {% for comment in comments %}
+    <tr><td><p>{{ comment.comment }}</p></td>
+        {% for author in authors %}
+        {% if comment.author_id == author.id %}
+        <td align="center"><p>{{ author.name }}</p></td>
+        {% endif %}
+        {% endfor %}
+        <td align="center"><p>{{ comment.date_of_update }}</p></td>
+        {% if comment.date_of_update != comment.date_of_creation %}
+        <td align="center"><p>обновлено</p></td>
+        {% else %}
+        <td align="center"><p> ---- </p></td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

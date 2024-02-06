@@ -1,0 +1,14 @@
+{% extends 'blog_app/base.html' %}
+{% block title %}{{ author.name }}'s Статьи{% endblock %}
+{% block content %}
+<h2>Последние {{ num }} статей автора: {{ author.name }}</h2>
+<table>
+{% for article in articles %}
+<tr>
+<!--    <td><a href="{% url 'post_full' article.id %}">{{ article.title }}</a></td></tr>-->
+    <td><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></td></tr>
+    <tr> <td></td></tr>
+<tr><td>{{ article.get_summary }}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

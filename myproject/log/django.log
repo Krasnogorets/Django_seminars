@@ -198,3 +198,1841 @@ INFO 2024-01-28 14:42:19,127 views 48012 49704  функция rnd_ вернул
 INFO 2024-01-28 14:42:19,128 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 15
 INFO 2024-01-28 14:42:19,343 views 48012 49704  функция rnd_ вернула выпало 51
 INFO 2024-01-28 14:42:19,344 basehttp 48012 49704 "GET /rnd/rnd/ HTTP/1.1" 200 15
+INFO 2024-02-02 15:46:54,034 autoreload 83312 78852 Watching for file changes with StatReloader
+INFO 2024-02-02 15:46:57,893 basehttp 83312 85760 "GET / HTTP/1.1" 200 13
+INFO 2024-02-02 15:47:13,466 basehttp 83312 85760 "GET /rnd/dice/5 HTTP/1.1" 301 0
+ERROR 2024-02-02 15:47:13,573 log 83312 64820 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 34, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst,1)' from 'enunerate(num_lst,1)'
+ERROR 2024-02-02 15:47:13,577 basehttp 83312 64820 "GET /rnd/dice/5/ HTTP/1.1" 500 151168
+ERROR 2024-02-02 15:48:46,467 log 83312 64820 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 34, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+              ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\context.py", line 286, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than list.
+ERROR 2024-02-02 15:48:46,467 basehttp 83312 64820 "GET /rnd/dice/5/ HTTP/1.1" 500 88736
+ERROR 2024-02-02 15:53:09,675 log 83312 64820 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 34, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[i]' from 'num_lst[i]'
+ERROR 2024-02-02 15:53:09,675 basehttp 83312 64820 "GET /rnd/dice/5/ HTTP/1.1" 500 159547
+ERROR 2024-02-02 15:53:51,507 log 83312 64820 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 34, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+              ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\context.py", line 286, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than list.
+ERROR 2024-02-02 15:53:51,509 basehttp 83312 64820 "GET /rnd/dice/5/ HTTP/1.1" 500 88736
+ERROR 2024-02-02 15:54:44,832 log 83312 64820 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 34, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 15:54:44,832 basehttp 83312 64820 "GET /rnd/dice/5/ HTTP/1.1" 500 150624
+ERROR 2024-02-02 15:55:12,440 log 83312 64820 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 34, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 15:55:12,441 basehttp 83312 64820 "GET /rnd/dice/5/ HTTP/1.1" 500 150624
+ERROR 2024-02-02 15:55:14,142 log 83312 64820 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 34, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 15:55:14,142 basehttp 83312 64820 "GET /rnd/dice/5/ HTTP/1.1" 500 150624
+INFO 2024-02-02 15:55:59,697 autoreload 83312 78852 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-02 15:56:00,348 autoreload 87668 60192 Watching for file changes with StatReloader
+ERROR 2024-02-02 15:56:00,818 log 87668 84548 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 35, in dice
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 15:56:00,821 basehttp 87668 84548 "GET /rnd/dice/5/ HTTP/1.1" 500 150592
+INFO 2024-02-02 15:59:00,313 autoreload 87668 60192 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-02 15:59:00,874 autoreload 73604 57040 Watching for file changes with StatReloader
+ERROR 2024-02-02 15:59:02,611 log 73604 13240 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 36, in dice
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 15:59:02,616 basehttp 73604 13240 "GET /rnd/dice/5/ HTTP/1.1" 500 150836
+ERROR 2024-02-02 15:59:04,587 log 73604 13240 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 36, in dice
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 15:59:04,587 basehttp 73604 13240 "GET /rnd/dice/5/ HTTP/1.1" 500 150836
+ERROR 2024-02-02 16:02:31,945 log 73604 13240 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 36, in dice
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 16:02:31,946 basehttp 73604 13240 "GET /rnd/dice/5/ HTTP/1.1" 500 152487
+INFO 2024-02-02 16:03:01,719 autoreload 86780 51028 Watching for file changes with StatReloader
+ERROR 2024-02-02 16:03:09,049 log 86780 77276 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 36, in dice
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst)' from 'len(num_lst)'
+ERROR 2024-02-02 16:03:09,054 basehttp 86780 77276 "GET /rnd/dice/5/ HTTP/1.1" 500 152350
+INFO 2024-02-02 16:03:32,590 views 86780 77276  функция dice вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+</head>
+<body>
+<h2>Результаты</h2>
+[1, 1, 6, 5, 6]
+
+
+
+</body>
+</html>
+INFO 2024-02-02 16:03:32,592 basehttp 86780 77276 "GET /rnd/dice/5/ HTTP/1.1" 200 170
+INFO 2024-02-02 16:04:37,857 autoreload 86780 51028 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-02 16:04:38,400 autoreload 72984 80480 Watching for file changes with StatReloader
+ERROR 2024-02-02 16:04:44,624 log 72984 74548 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 35, in dice
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 846, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should use the format 'for x in y': for i in len({{ num_lst }})
+ERROR 2024-02-02 16:04:44,628 basehttp 72984 74548 "GET /rnd/dice/5/ HTTP/1.1" 500 140654
+ERROR 2024-02-02 16:06:33,319 log 72984 74548 Internal Server Error: /rnd/dice/5/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 35, in dice
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(len(num_lst))' from 'range(len(num_lst))'
+ERROR 2024-02-02 16:06:33,319 basehttp 72984 74548 "GET /rnd/dice/5/ HTTP/1.1" 500 151646
+INFO 2024-02-02 16:08:47,491 views 72984 74548  функция dice вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+</head>
+<body>
+<h2>Результаты</h2>
+
+<ul>
+
+<li>Бросок выдал: 2</li>
+
+<li>Бросок выдал: 5</li>
+
+<li>Бросок выдал: 4</li>
+
+<li>Бросок выдал: 5</li>
+
+<li>Бросок выдал: 1</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:08:47,492 basehttp 72984 74548 "GET /rnd/dice/5/ HTTP/1.1" 200 351
+INFO 2024-02-02 16:09:04,371 basehttp 72984 74548 "GET /rnd/dice/15 HTTP/1.1" 301 0
+INFO 2024-02-02 16:09:04,374 views 72984 85556  функция dice вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+</head>
+<body>
+<h2>Результаты</h2>
+
+<ul>
+
+<li>Бросок выдал: 6</li>
+
+<li>Бросок выдал: 2</li>
+
+<li>Бросок выдал: 3</li>
+
+<li>Бросок выдал: 4</li>
+
+<li>Бросок выдал: 3</li>
+
+<li>Бросок выдал: 2</li>
+
+<li>Бросок выдал: 2</li>
+
+<li>Бросок выдал: 1</li>
+
+<li>Бросок выдал: 3</li>
+
+<li>Бросок выдал: 5</li>
+
+<li>Бросок выдал: 6</li>
+
+<li>Бросок выдал: 3</li>
+
+<li>Бросок выдал: 6</li>
+
+<li>Бросок выдал: 4</li>
+
+<li>Бросок выдал: 2</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:09:04,377 basehttp 72984 85556 "GET /rnd/dice/15/ HTTP/1.1" 200 721
+INFO 2024-02-02 16:12:56,003 autoreload 72984 80480 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-02 16:12:56,733 autoreload 87096 86436 Watching for file changes with StatReloader
+INFO 2024-02-02 16:13:27,085 views 87096 82436  функция orel вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+</head>
+<body>
+<h2>Результаты</h2>
+
+<ul>
+
+<li>Бросок выдал: решка</li>
+
+<li>Бросок выдал: решка</li>
+
+<li>Бросок выдал: орел</li>
+
+<li>Бросок выдал: орел</li>
+
+<li>Бросок выдал: решка</li>
+
+<li>Бросок выдал: решка</li>
+
+<li>Бросок выдал: орел</li>
+
+<li>Бросок выдал: орел</li>
+
+<li>Бросок выдал: решка</li>
+
+<li>Бросок выдал: орел</li>
+
+<li>Бросок выдал: орел</li>
+
+<li>Бросок выдал: решка</li>
+
+<li>Бросок выдал: орел</li>
+
+<li>Бросок выдал: решка</li>
+
+<li>Бросок выдал: решка</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:13:27,085 basehttp 87096 82436 "GET /rnd/orel/15/ HTTP/1.1" 200 842
+INFO 2024-02-02 16:14:49,208 autoreload 87096 86436 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-02 16:14:49,807 autoreload 82932 14460 Watching for file changes with StatReloader
+WARNING 2024-02-02 16:14:55,984 log 82932 85332 Not Found: /rnd/rnd_/15/
+WARNING 2024-02-02 16:14:55,984 basehttp 82932 85332 "GET /rnd/rnd_/15/ HTTP/1.1" 404 3162
+INFO 2024-02-02 16:15:02,005 views 82932 85332  функция rnd_ вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+</head>
+<body>
+<h2>Результаты</h2>
+
+<ul>
+
+<li>Бросок выдал: 38</li>
+
+<li>Бросок выдал: 12</li>
+
+<li>Бросок выдал: 22</li>
+
+<li>Бросок выдал: 43</li>
+
+<li>Бросок выдал: 47</li>
+
+<li>Бросок выдал: 7</li>
+
+<li>Бросок выдал: 90</li>
+
+<li>Бросок выдал: 70</li>
+
+<li>Бросок выдал: 60</li>
+
+<li>Бросок выдал: 47</li>
+
+<li>Бросок выдал: 43</li>
+
+<li>Бросок выдал: 4</li>
+
+<li>Бросок выдал: 34</li>
+
+<li>Бросок выдал: 40</li>
+
+<li>Бросок выдал: 31</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:15:02,005 basehttp 82932 85332 "GET /rnd/rnd/15/ HTTP/1.1" 200 734
+INFO 2024-02-02 16:16:57,746 autoreload 82932 14460 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\myproject\settings.py changed, reloading.
+INFO 2024-02-02 16:16:58,331 autoreload 86028 78136 Watching for file changes with StatReloader
+ERROR 2024-02-02 16:18:10,398 log 86028 78684 Internal Server Error: /rnd/rnd/15/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 42, in rnd_
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 229, in render
+    raise ValueError(
+ValueError: Need 2 values to unpack in for loop; got 1. 
+ERROR 2024-02-02 16:18:10,401 basehttp 86028 78684 "GET /rnd/rnd/15/ HTTP/1.1" 500 114701
+ERROR 2024-02-02 16:20:58,354 log 86028 78684 Internal Server Error: /rnd/rnd/15/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 42, in rnd_
+    return render(request, "sem2_app/index.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 859, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(num_lst,i)' from 'enumerate(num_lst,i)'
+ERROR 2024-02-02 16:20:58,354 basehttp 86028 78684 "GET /rnd/rnd/15/ HTTP/1.1" 500 152042
+INFO 2024-02-02 16:22:50,613 views 86028 78684  функция rnd_ вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+</head>
+<body>
+<h2>Результаты</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: 9</li>
+
+<li>Бросок 2 выдал: 41</li>
+
+<li>Бросок 3 выдал: 44</li>
+
+<li>Бросок 4 выдал: 17</li>
+
+<li>Бросок 5 выдал: 35</li>
+
+<li>Бросок 6 выдал: 90</li>
+
+<li>Бросок 7 выдал: 68</li>
+
+<li>Бросок 8 выдал: 5</li>
+
+<li>Бросок 9 выдал: 32</li>
+
+<li>Бросок 10 выдал: 14</li>
+
+<li>Бросок 11 выдал: 37</li>
+
+<li>Бросок 12 выдал: 22</li>
+
+<li>Бросок 13 выдал: 79</li>
+
+<li>Бросок 14 выдал: 44</li>
+
+<li>Бросок 15 выдал: 30</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:22:50,613 basehttp 86028 78684 "GET /rnd/rnd/15/ HTTP/1.1" 200 770
+INFO 2024-02-02 16:23:15,934 views 86028 78684  функция dice вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+</head>
+<body>
+<h2>Результаты</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: 1</li>
+
+<li>Бросок 2 выдал: 4</li>
+
+<li>Бросок 3 выдал: 2</li>
+
+<li>Бросок 4 выдал: 3</li>
+
+<li>Бросок 5 выдал: 3</li>
+
+<li>Бросок 6 выдал: 3</li>
+
+<li>Бросок 7 выдал: 1</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:23:15,934 basehttp 86028 78684 "GET /rnd/dice/7/ HTTP/1.1" 200 439
+INFO 2024-02-02 16:26:07,174 autoreload 86028 78136 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-02 16:26:07,798 autoreload 72672 82852 Watching for file changes with StatReloader
+ERROR 2024-02-02 16:26:13,986 log 72672 82116 Internal Server Error: /rnd/orel/7/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 12, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 28, in orel
+    return render(request, "sem2_app/index.html", num_lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+              ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\context.py", line 286, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than list.
+ERROR 2024-02-02 16:26:13,987 basehttp 72672 82116 "GET /rnd/orel/7/ HTTP/1.1" 500 89749
+INFO 2024-02-02 16:29:01,932 autoreload 72672 82852 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-02 16:29:02,606 autoreload 84324 86956 Watching for file changes with StatReloader
+INFO 2024-02-02 16:29:05,188 views 84324 84028  функция orel вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>орел-решка</title>
+</head>
+<body>
+<h2>Результаты игры орел-решка</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: решка</li>
+
+<li>Бросок 2 выдал: орел</li>
+
+<li>Бросок 3 выдал: решка</li>
+
+<li>Бросок 4 выдал: орел</li>
+
+<li>Бросок 5 выдал: орел</li>
+
+<li>Бросок 6 выдал: орел</li>
+
+<li>Бросок 7 выдал: орел</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:29:05,189 basehttp 84324 84028 "GET /rnd/orel/7/ HTTP/1.1" 200 536
+INFO 2024-02-02 16:29:16,453 views 84324 84028  функция rnd_ вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>случайные числа</title>
+</head>
+<body>
+<h2>Результаты игры случайные числа</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: 92</li>
+
+<li>Бросок 2 выдал: 38</li>
+
+<li>Бросок 3 выдал: 33</li>
+
+<li>Бросок 4 выдал: 21</li>
+
+<li>Бросок 5 выдал: 98</li>
+
+<li>Бросок 6 выдал: 39</li>
+
+<li>Бросок 7 выдал: 10</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-02 16:29:16,456 basehttp 84324 84028 "GET /rnd/rnd/7/ HTTP/1.1" 200 510
+INFO 2024-02-02 17:21:16,899 autoreload 84324 86956 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\myproject\urls.py changed, reloading.
+INFO 2024-02-02 17:21:30,466 autoreload 47528 85304 Watching for file changes with StatReloader
+INFO 2024-02-02 17:21:32,038 basehttp 47528 81836 "GET / HTTP/1.1" 200 13
+WARNING 2024-02-02 17:21:39,769 log 47528 81836 Not Found: /article
+WARNING 2024-02-02 17:21:39,769 basehttp 47528 81836 "GET /article HTTP/1.1" 404 2642
+WARNING 2024-02-02 17:21:45,814 log 47528 81836 Not Found: /article/
+WARNING 2024-02-02 17:21:45,816 basehttp 47528 81836 "GET /article/ HTTP/1.1" 404 2645
+INFO 2024-02-02 17:23:19,575 autoreload 47528 85304 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\urls.py changed, reloading.
+INFO 2024-02-02 17:23:20,161 autoreload 86952 78500 Watching for file changes with StatReloader
+WARNING 2024-02-02 17:23:27,452 log 86952 59760 Not Found: /articles/1
+WARNING 2024-02-02 17:23:27,452 basehttp 86952 59760 "GET /articles/1 HTTP/1.1" 404 2742
+INFO 2024-02-02 17:24:59,005 autoreload 86952 78500 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\urls.py changed, reloading.
+INFO 2024-02-02 17:24:59,576 autoreload 77312 82900 Watching for file changes with StatReloader
+INFO 2024-02-02 17:24:59,761 basehttp 77312 52980 "GET /articles/1 HTTP/1.1" 301 0
+INFO 2024-02-02 17:24:59,767 basehttp 77312 86764 "GET /articles/1/ HTTP/1.1" 200 325
+INFO 2024-02-02 17:29:11,077 autoreload 77312 82900 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-02 17:29:11,770 autoreload 72404 87264 Watching for file changes with StatReloader
+INFO 2024-02-02 17:29:59,284 autoreload 72404 87264 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\urls.py changed, reloading.
+INFO 2024-02-02 17:29:59,814 autoreload 77892 86720 Watching for file changes with StatReloader
+INFO 2024-02-02 17:30:41,090 autoreload 77892 86720 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\urls.py changed, reloading.
+INFO 2024-02-02 17:30:41,805 autoreload 74424 81612 Watching for file changes with StatReloader
+INFO 2024-02-02 17:32:51,241 autoreload 74424 81612 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\urls.py changed, reloading.
+INFO 2024-02-02 17:32:51,838 autoreload 80892 80812 Watching for file changes with StatReloader
+ERROR 2024-02-02 17:32:53,373 log 80892 86304 Internal Server Error: /articles/1/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 8, in author_posts
+    return render(request, 'blog_app/index.html', {'author':author, 'articles': articles})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-02-02 17:32:53,375 basehttp 80892 86304 "GET /articles/1/ HTTP/1.1" 500 136582
+ERROR 2024-02-02 17:33:21,786 log 80892 86304 Internal Server Error: /articles/1/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: blog/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 8, in author_posts
+    return render(request, 'blog_app/index.html', {'author':author, 'articles': articles})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: blog/base.html
+ERROR 2024-02-02 17:33:21,786 basehttp 80892 86304 "GET /articles/1/ HTTP/1.1" 500 136767
+INFO 2024-02-02 17:33:35,542 basehttp 80892 86304 "GET /articles/1/ HTTP/1.1" 200 288
+ERROR 2024-02-02 17:33:50,322 log 80892 86304 Internal Server Error: /articles/post/3/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: post_full() got an unexpected keyword argument 'post_id'
+ERROR 2024-02-02 17:33:50,323 basehttp 80892 86304 "GET /articles/post/3/ HTTP/1.1" 500 64073
+INFO 2024-02-02 17:34:38,985 basehttp 80892 86304 "GET /articles/1/ HTTP/1.1" 200 331
+ERROR 2024-02-02 17:34:42,660 log 80892 86304 Internal Server Error: /articles/post/3/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: post_full() got an unexpected keyword argument 'post_id'
+ERROR 2024-02-02 17:34:42,661 basehttp 80892 86304 "GET /articles/post/3/ HTTP/1.1" 500 64073
+INFO 2024-02-02 17:37:04,756 autoreload 80892 80812 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py changed, reloading.
+INFO 2024-02-02 17:37:32,849 autoreload 72744 85424 Watching for file changes with StatReloader
+ERROR 2024-02-02 17:37:37,440 log 72744 83280 Internal Server Error: /articles/1/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 8, in author_posts
+    return render(request, 'blog_app/index.html', {'author':author, 'articles': articles})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 710, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 909, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py", line 70, in get_summary
+    words = self.content.split()
+            ^^^^^^^^^^^^
+AttributeError: 'Article' object has no attribute 'content'
+ERROR 2024-02-02 17:37:37,440 basehttp 72744 83280 "GET /articles/1/ HTTP/1.1" 500 180358
+INFO 2024-02-02 17:40:03,109 autoreload 72744 85424 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py changed, reloading.
+INFO 2024-02-02 17:40:03,670 autoreload 78728 85660 Watching for file changes with StatReloader
+INFO 2024-02-02 17:40:04,018 basehttp 78728 83008 "GET /articles/1/ HTTP/1.1" 200 436
+INFO 2024-02-02 17:41:20,593 autoreload 84332 84064 Watching for file changes with StatReloader
+INFO 2024-02-02 17:41:24,851 basehttp 84332 83948 "GET /articles/1/ HTTP/1.1" 200 1313
+INFO 2024-02-02 17:42:28,689 basehttp 84332 83948 "GET /articles/1/ HTTP/1.1" 200 1428
+INFO 2024-02-02 17:43:14,694 basehttp 84332 83948 "GET /articles/1/ HTTP/1.1" 200 1518
+ERROR 2024-02-02 17:43:26,488 log 84332 83948 Internal Server Error: /articles/post/23/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: post_full() got an unexpected keyword argument 'post_id'
+ERROR 2024-02-02 17:43:26,488 basehttp 84332 83948 "GET /articles/post/23/ HTTP/1.1" 500 64083
+ERROR 2024-02-02 17:46:14,547 log 84332 83948 Internal Server Error: /articles/post/23/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: post_full() got an unexpected keyword argument 'post_id'
+ERROR 2024-02-02 17:46:14,548 basehttp 84332 83948 "GET /articles/post/23/ HTTP/1.1" 500 64220
+ERROR 2024-02-02 17:46:19,803 log 84332 83948 Internal Server Error: /articles/post/21/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: post_full() got an unexpected keyword argument 'post_id'
+ERROR 2024-02-02 17:46:19,805 basehttp 84332 83948 "GET /articles/post/21/ HTTP/1.1" 500 64083
+INFO 2024-02-02 17:56:13,601 autoreload 84332 84064 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\urls.py changed, reloading.
+INFO 2024-02-02 17:56:14,281 autoreload 85004 80604 Watching for file changes with StatReloader
+WARNING 2024-02-02 17:56:15,055 log 85004 80804 Not Found: /articles/post/21/
+WARNING 2024-02-02 17:56:15,055 basehttp 85004 80804 "GET /articles/post/21/ HTTP/1.1" 404 2967
+INFO 2024-02-02 18:01:35,235 autoreload 85428 80316 Watching for file changes with StatReloader
+INFO 2024-02-02 18:01:41,062 basehttp 85428 85172 "GET /articles/1/ HTTP/1.1" 200 1533
+INFO 2024-02-02 18:01:43,903 basehttp 85428 85172 "GET /articles/article/23/ HTTP/1.1" 200 1105
+INFO 2024-02-02 18:01:50,487 basehttp 85428 85172 "GET /articles/article/16/ HTTP/1.1" 200 1313
+INFO 2024-02-02 18:02:00,033 basehttp 85428 85172 "GET /articles/2/ HTTP/1.1" 200 1512
+INFO 2024-02-02 18:02:02,807 basehttp 85428 85172 "GET /articles/article/22/ HTTP/1.1" 200 856
+INFO 2024-02-03 14:19:43,315 autoreload 53628 1764 Watching for file changes with StatReloader
+INFO 2024-02-03 14:19:50,194 basehttp 53628 80228 "GET /articles/2/ HTTP/1.1" 200 210
+INFO 2024-02-03 14:20:03,692 basehttp 53628 80228 "GET /articles/1/ HTTP/1.1" 200 747
+INFO 2024-02-03 14:21:36,784 autoreload 53628 1764 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-03 14:21:37,402 autoreload 68616 89888 Watching for file changes with StatReloader
+INFO 2024-02-03 14:21:38,356 basehttp 68616 88576 "GET /articles/1/ HTTP/1.1" 200 747
+INFO 2024-02-03 14:26:27,374 autoreload 68616 89888 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-03 14:26:27,965 autoreload 87608 89608 Watching for file changes with StatReloader
+INFO 2024-02-03 14:26:52,938 autoreload 87608 89608 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-03 14:26:53,552 autoreload 90016 80228 Watching for file changes with StatReloader
+INFO 2024-02-03 14:27:20,639 autoreload 90016 80228 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-03 14:27:21,225 autoreload 79424 83700 Watching for file changes with StatReloader
+INFO 2024-02-03 14:28:18,080 autoreload 79424 83700 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py changed, reloading.
+INFO 2024-02-03 14:28:18,736 autoreload 89448 77700 Watching for file changes with StatReloader
+INFO 2024-02-03 14:28:55,760 autoreload 89448 77700 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py changed, reloading.
+INFO 2024-02-03 14:28:56,405 autoreload 78136 75084 Watching for file changes with StatReloader
+INFO 2024-02-03 14:29:47,064 autoreload 78136 75084 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py changed, reloading.
+INFO 2024-02-03 14:29:47,654 autoreload 57360 89624 Watching for file changes with StatReloader
+INFO 2024-02-03 14:30:25,966 autoreload 57360 89624 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py changed, reloading.
+INFO 2024-02-03 14:30:26,550 autoreload 86424 73920 Watching for file changes with StatReloader
+INFO 2024-02-03 14:34:22,111 autoreload 89844 81340 Watching for file changes with StatReloader
+ERROR 2024-02-03 14:34:26,625 log 89844 83744 Internal Server Error: /articles/1/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 9, in author_posts
+    return render(request, 'blog_app/index.html', {'author': author, 'articles': articles, 'num': num})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' }">{{ article.title' from 'article.get_absolute_url }">{{ article.title'
+ERROR 2024-02-03 14:34:26,631 basehttp 89844 83744 "GET /articles/1/ HTTP/1.1" 500 197383
+INFO 2024-02-03 14:34:46,742 basehttp 89844 83744 "GET /articles/1/ HTTP/1.1" 200 979
+ERROR 2024-02-03 14:34:48,425 log 89844 83744 Internal Server Error: /articles/article/8/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 14, in post_full
+    article.views.count += 1
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'count'
+ERROR 2024-02-03 14:34:48,427 basehttp 89844 83744 "GET /articles/article/8/ HTTP/1.1" 500 67633
+INFO 2024-02-03 14:36:11,903 autoreload 89844 81340 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-03 14:36:12,525 autoreload 78252 75140 Watching for file changes with StatReloader
+INFO 2024-02-03 14:36:13,850 basehttp 78252 89072 "GET /articles/article/8/ HTTP/1.1" 200 1078
+INFO 2024-02-03 14:36:18,942 basehttp 78252 89072 "GET /articles/article/3/ HTTP/1.1" 200 796
+INFO 2024-02-03 14:36:21,275 basehttp 78252 89072 "GET /articles/article/3/ HTTP/1.1" 200 796
+INFO 2024-02-03 14:36:29,685 basehttp 78252 89072 "GET /articles/article/3/ HTTP/1.1" 200 796
+INFO 2024-02-03 14:36:30,332 basehttp 78252 89072 "GET /articles/article/3/ HTTP/1.1" 200 796
+INFO 2024-02-05 11:40:44,502 autoreload 76876 91712 Watching for file changes with StatReloader
+INFO 2024-02-05 11:40:48,946 basehttp 76876 91680 "GET / HTTP/1.1" 200 13
+INFO 2024-02-05 11:41:52,798 basehttp 76876 91680 "GET /articles/2/ HTTP/1.1" 200 210
+INFO 2024-02-05 11:42:49,309 basehttp 76876 91680 "GET /articles/article/2/ HTTP/1.1" 200 1183
+INFO 2024-02-05 11:43:06,186 basehttp 76876 91680 "GET /articles/2/ HTTP/1.1" 200 210
+INFO 2024-02-05 11:44:06,787 basehttp 76876 91680 "GET /articles/2/ HTTP/1.1" 200 2096
+INFO 2024-02-05 11:46:38,788 basehttp 76876 91680 "GET /articles/2/ HTTP/1.1" 200 2131
+INFO 2024-02-05 11:46:45,605 basehttp 76876 91680 "GET /articles/article/22/ HTTP/1.1" 200 856
+INFO 2024-02-05 16:40:31,373 autoreload 5928 93976 Watching for file changes with StatReloader
+ERROR 2024-02-05 16:40:34,165 log 5928 72712 Internal Server Error: /articles/article/22/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 14, in post_full
+    comments = Article.Comment.filter(article_id=article_id).order_by('-date_of_update')
+               ^^^^^^^^^^^^^^^
+AttributeError: type object 'Article' has no attribute 'Comment'
+ERROR 2024-02-05 16:40:34,165 basehttp 5928 72712 "GET /articles/article/22/ HTTP/1.1" 500 68011
+INFO 2024-02-05 16:41:28,263 autoreload 5928 93976 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-05 16:41:29,003 autoreload 93896 93728 Watching for file changes with StatReloader
+INFO 2024-02-05 16:41:29,571 basehttp 93896 75648 "GET /articles/article/22/ HTTP/1.1" 200 1606
+INFO 2024-02-05 16:42:27,382 basehttp 93896 75648 "GET /articles/article/22/ HTTP/1.1" 200 1854
+INFO 2024-02-05 16:43:13,695 basehttp 93896 75648 "GET /articles/article/22/ HTTP/1.1" 200 1858
+INFO 2024-02-05 16:49:46,643 basehttp 93896 95084 "GET /articles/article/22/ HTTP/1.1" 200 1878
+INFO 2024-02-05 16:49:53,726 basehttp 93896 95084 "GET /articles/article/20/ HTTP/1.1" 200 969
+INFO 2024-02-05 16:49:59,146 basehttp 93896 95084 "GET /articles/article/18/ HTTP/1.1" 200 1838
+INFO 2024-02-05 16:50:04,589 basehttp 93896 95084 "GET /articles/article/17/ HTTP/1.1" 200 1175
+INFO 2024-02-05 16:50:12,165 basehttp 93896 95084 "GET /articles/article/7/ HTTP/1.1" 200 905
+INFO 2024-02-05 16:50:19,059 basehttp 93896 95084 "GET /articles/1/ HTTP/1.1" 200 993
+WARNING 2024-02-05 16:50:26,640 log 93896 95084 Not Found: /articles/3/
+WARNING 2024-02-05 16:50:26,640 basehttp 93896 95084 "GET /articles/3/ HTTP/1.1" 404 2909
+INFO 2024-02-05 16:50:38,192 basehttp 93896 95084 "GET /articles/4/ HTTP/1.1" 200 600
+INFO 2024-02-05 16:51:26,721 basehttp 93896 95084 "GET /articles/2/ HTTP/1.1" 200 2131
+INFO 2024-02-05 16:51:38,367 basehttp 93896 95084 "GET /articles/2/ HTTP/1.1" 200 2131
+INFO 2024-02-05 16:51:51,073 basehttp 93896 95084 "GET /articles/1/ HTTP/1.1" 200 1393
+INFO 2024-02-05 16:51:54,036 basehttp 93896 95084 "GET /articles/article/13/ HTTP/1.1" 200 1068
+INFO 2024-02-05 17:05:02,888 autoreload 93896 93728 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-05 17:16:47,387 autoreload 95228 69044 Watching for file changes with StatReloader
+INFO 2024-02-05 17:16:50,679 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1466
+ERROR 2024-02-05 17:18:33,403 log 95228 91760 Internal Server Error: /articles/article/13/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: '='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 18, in post_full
+    return render(request, 'blog_app/post_full.html', {'article': article,'comments':comments,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 959, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 892, in __init__
+    super().__init__(*args, **kwargs)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\defaulttags.py", line 895, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '=' from '='
+ERROR 2024-02-05 17:18:33,408 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 500 252087
+INFO 2024-02-05 17:18:43,917 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1298
+INFO 2024-02-05 17:20:19,010 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1372
+INFO 2024-02-05 17:20:53,574 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1405
+INFO 2024-02-05 17:21:17,101 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1411
+INFO 2024-02-05 17:21:18,487 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1411
+INFO 2024-02-05 17:21:40,481 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1414
+INFO 2024-02-05 17:22:25,165 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1504
+INFO 2024-02-05 17:22:37,197 basehttp 95228 91760 "GET /articles/article/8/ HTTP/1.1" 200 1751
+INFO 2024-02-05 17:22:42,955 basehttp 95228 91760 "GET /articles/article/3/ HTTP/1.1" 200 1435
+INFO 2024-02-05 17:23:20,466 basehttp 95228 91760 "GET /articles/article/3/ HTTP/1.1" 200 1450
+INFO 2024-02-05 17:23:35,905 basehttp 95228 91760 "GET /articles/2/ HTTP/1.1" 200 2131
+INFO 2024-02-05 17:23:38,465 basehttp 95228 91760 "GET /articles/article/22/ HTTP/1.1" 200 2657
+INFO 2024-02-05 17:23:43,517 basehttp 95228 91760 "GET /articles/article/20/ HTTP/1.1" 200 1100
+INFO 2024-02-05 17:23:46,892 basehttp 95228 91760 "GET /articles/article/18/ HTTP/1.1" 200 2289
+INFO 2024-02-05 17:23:52,643 basehttp 95228 91760 "GET /articles/article/17/ HTTP/1.1" 200 1462
+INFO 2024-02-05 17:23:57,517 basehttp 95228 91760 "GET /articles/article/7/ HTTP/1.1" 200 1192
+INFO 2024-02-05 17:24:09,502 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
+INFO 2024-02-05 17:27:02,229 basehttp 95228 91760 "GET /articles/2/ HTTP/1.1" 200 2131
+WARNING 2024-02-05 17:27:12,382 log 95228 91760 Not Found: /articles/3/
+WARNING 2024-02-05 17:27:12,382 basehttp 95228 91760 "GET /articles/3/ HTTP/1.1" 404 2909
+INFO 2024-02-05 17:27:17,795 basehttp 95228 91760 "GET /articles/4/ HTTP/1.1" 200 600
+INFO 2024-02-05 17:27:22,721 basehttp 95228 91760 "GET /articles/5/ HTTP/1.1" 200 226
+INFO 2024-02-05 17:28:04,877 basehttp 95228 91760 "GET /articles/5/ HTTP/1.1" 200 226
+INFO 2024-02-05 17:28:06,337 basehttp 95228 91760 "GET /articles/5/ HTTP/1.1" 200 226
+INFO 2024-02-05 17:28:15,766 basehttp 95228 91760 "GET /articles/1/ HTTP/1.1" 200 1776
+INFO 2024-02-05 17:28:18,344 basehttp 95228 91760 "GET /articles/article/15/ HTTP/1.1" 200 2815
+INFO 2024-02-05 17:28:47,009 basehttp 95228 91760 "GET /articles/2/ HTTP/1.1" 200 2131
+INFO 2024-02-05 17:28:48,281 basehttp 95228 91760 "GET /articles/article/22/ HTTP/1.1" 200 2657
+INFO 2024-02-05 17:28:56,169 basehttp 95228 91760 "GET /articles/article/20/ HTTP/1.1" 200 1100
+INFO 2024-02-05 17:28:58,967 basehttp 95228 91760 "GET /articles/article/18/ HTTP/1.1" 200 2289
+INFO 2024-02-05 17:29:02,885 basehttp 95228 91760 "GET /articles/article/17/ HTTP/1.1" 200 1462
+INFO 2024-02-05 17:29:05,175 basehttp 95228 91760 "GET /articles/article/7/ HTTP/1.1" 200 1192
+INFO 2024-02-05 17:29:08,860 basehttp 95228 91760 "GET /articles/article/22/ HTTP/1.1" 200 2657
+INFO 2024-02-05 17:29:18,348 basehttp 95228 91760 "GET /articles/1/ HTTP/1.1" 200 1776
+INFO 2024-02-05 17:29:19,751 basehttp 95228 91760 "GET /articles/article/15/ HTTP/1.1" 200 2815
+INFO 2024-02-05 17:29:22,352 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
+INFO 2024-02-05 17:30:36,944 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
+INFO 2024-02-05 17:30:38,613 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
+INFO 2024-02-05 17:30:44,112 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
+INFO 2024-02-05 17:30:55,641 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
+INFO 2024-02-05 17:32:22,027 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1512

@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('orel/', views.orel, name='orel'),
-    path('dice/', views.dice, name='dice'),
-    path('rnd/', views.rnd_, name='rnd'),
+    path('orel/<int:num>/', views.orel, name='orel'),
+    path('dice/<int:num>/', views.dice, name='dice'),
+    path('rnd/<int:num>/', views.rnd_, name='rnd'),
 ]

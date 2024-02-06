@@ -35,6 +35,8 @@ False
 from django.db import models
 from random import choice
 
+from django.urls import reverse
+
 
 class Author(models.Model):
     name = models.CharField(max_length=100)
@@ -63,8 +65,14 @@ class Article(models.Model):
     views = models.IntegerField(default=0)
     published = models.BooleanField(default=False)
 
+    def get_absolute_url(self):
+        return reverse('post_full',kwargs={'article_id': self.pk})
     def __str__(self):
         return self.title
+
+    def get_summary(self):
+        words = str(self.text).split()
+        return f'{" ".join(words[:12])}...'
 
 
 class Comment(models.Model):
