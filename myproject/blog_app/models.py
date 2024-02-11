@@ -53,7 +53,7 @@ class Author(models.Model):
     # def full_name(self):
     #     return f'{self.secondname} {self.name}'
     def __str__(self):
-        return self.fullname
+        return self.name
 
 
 class Article(models.Model):

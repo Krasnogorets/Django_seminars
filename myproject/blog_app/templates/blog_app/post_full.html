@@ -3,6 +3,12 @@
 {% block content %}
 <h3>{{ article.title }}</h3>
 <p>{{ article.text }}</p>
+<h3>{{ message }}</h3>
+<form action="" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Отправить">
+</form>
 <table border="1">
     <tr><td  width="400px"><p>Комментарий</p></td><td align="center" width="100px"><p>Автор</p></td>
         <td align="center" width="200px"><p>Дата обновления</p></td>

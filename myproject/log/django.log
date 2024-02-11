@@ -2036,3 +2036,1142 @@ INFO 2024-02-05 17:30:38,613 basehttp 95228 91760 "GET /articles/article/13/ HTT
 INFO 2024-02-05 17:30:44,112 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
 INFO 2024-02-05 17:30:55,641 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1519
 INFO 2024-02-05 17:32:22,027 basehttp 95228 91760 "GET /articles/article/13/ HTTP/1.1" 200 1512
+INFO 2024-02-06 15:52:16,787 basehttp 95228 99788 "GET / HTTP/1.1" 200 13
+WARNING 2024-02-06 15:53:33,479 log 95228 99788 Not Found: /shop/order/1
+WARNING 2024-02-06 15:53:33,479 basehttp 95228 99788 "GET /shop/order/1 HTTP/1.1" 404 2657
+WARNING 2024-02-06 15:55:29,891 log 95228 99788 Not Found: /shop/order/1
+WARNING 2024-02-06 15:55:29,891 basehttp 95228 99788 "GET /shop/order/1 HTTP/1.1" 404 2657
+WARNING 2024-02-06 15:55:34,786 log 95228 99788 Not Found: /shop/order/1
+WARNING 2024-02-06 15:55:34,786 basehttp 95228 99788 "GET /shop/order/1 HTTP/1.1" 404 2657
+WARNING 2024-02-06 15:55:36,458 log 95228 99788 Not Found: /shop/order/1
+WARNING 2024-02-06 15:55:36,458 basehttp 95228 99788 "GET /shop/order/1 HTTP/1.1" 404 2657
+INFO 2024-02-06 15:55:59,571 basehttp 95228 99788 "GET / HTTP/1.1" 200 13
+WARNING 2024-02-06 15:56:11,160 log 95228 99788 Not Found: /shop/order/1
+WARNING 2024-02-06 15:56:11,160 basehttp 95228 99788 "GET /shop/order/1 HTTP/1.1" 404 2657
+INFO 2024-02-10 21:39:47,563 autoreload 37424 29832 Watching for file changes with StatReloader
+INFO 2024-02-10 21:39:51,940 basehttp 37424 31384 "GET / HTTP/1.1" 200 13
+WARNING 2024-02-10 21:39:52,248 log 37424 31384 Not Found: /favicon.ico
+WARNING 2024-02-10 21:39:52,263 basehttp 37424 31384 "GET /favicon.ico HTTP/1.1" 404 2654
+WARNING 2024-02-10 21:39:58,294 log 37424 31384 Not Found: /game
+WARNING 2024-02-10 21:39:58,294 basehttp 37424 31384 "GET /game HTTP/1.1" 404 2633
+INFO 2024-02-10 21:40:11,670 basehttp 37424 31384 "GET /rnd/game HTTP/1.1" 301 0
+ERROR 2024-02-10 21:40:11,858 log 37424 32376 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 13, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 60, in game_form
+    return render(request, 'sem2_app/game_form.html', {'form':form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-02-10 21:40:11,868 basehttp 37424 32376 "GET /rnd/game/ HTTP/1.1" 500 137524
+INFO 2024-02-10 21:40:25,483 basehttp 37424 32376 "GET / HTTP/1.1" 200 13
+ERROR 2024-02-10 21:41:10,114 log 37424 32376 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 13, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 60, in game_form
+    return render(request, 'sem2_app/game_form.html', {'form':form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-02-10 21:41:10,121 basehttp 37424 32376 "GET /rnd/game/ HTTP/1.1" 500 137524
+ERROR 2024-02-10 21:43:00,826 log 37424 32376 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 13, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 60, in game_form
+    return render(request, 'sem2_app/game_form.html', {'form':form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-02-10 21:43:00,830 basehttp 37424 32376 "GET /rnd/game/ HTTP/1.1" 500 137661
+INFO 2024-02-10 21:43:30,078 views 37424 32376  функция game_form вернула <!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Блог</title>
+</head>
+<body>
+
+<form action="" method="post">
+<input type="hidden" name="csrfmiddlewaretoken" value="FTdFsHH0Rbe6YTuC9FGGHPrgqnkAn789CskXA8Z9eoyEZtVHfcChd4jupArs2n0L">
+<div>
+    <label for="id_game">Game:</label>
+
+
+
+<select name="game" id="id_game">
+  <option value="C">Coin</option>
+
+  <option value="R">Rnd</option>
+
+  <option value="D">Dice</option>
+
+</select>
+    
+</div>
+
+  <div>
+    <label for="id_attempts">Attempts:</label>
+
+
+
+<input type="number" name="attempts" min="1" max="50" required id="id_attempts">
+    
+      
+    
+</div>
+<input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
+INFO 2024-02-10 21:43:30,078 basehttp 37424 32376 "GET /rnd/game/ HTTP/1.1" 200 701
+INFO 2024-02-10 21:44:00,504 views 37424 32376  функция game_form вернула <!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Блог</title>
+</head>
+<body>
+
+<form action="" method="post">
+<input type="hidden" name="csrfmiddlewaretoken" value="nsNMF4fsULJHVntmg7m3ekcRQIEDEmeKk1U4NvxBhY3fWXUrmEiEKz45PVLvjC6m">
+<p>
+    <label for="id_game">Game:</label>
+    <select name="game" id="id_game">
+  <option value="C">Coin</option>
+
+  <option value="R">Rnd</option>
+
+  <option value="D">Dice</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_attempts">Attempts:</label>
+    <input type="number" name="attempts" min="1" max="50" required id="id_attempts">
+    
+    
+      
+    
+  </p>
+<input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
+INFO 2024-02-10 21:44:00,508 basehttp 37424 32376 "GET /rnd/game/ HTTP/1.1" 200 712
+ERROR 2024-02-10 21:44:15,212 log 37424 32376 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 13, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 56, in game_form
+    attempt = form.cleaned_data['attempt']
+              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'attempt'
+ERROR 2024-02-10 21:44:15,219 basehttp 37424 32376 "POST /rnd/game/ HTTP/1.1" 500 73120
+INFO 2024-02-10 21:45:50,462 autoreload 37424 29832 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 21:45:51,591 autoreload 32896 36976 Watching for file changes with StatReloader
+INFO 2024-02-10 21:45:53,111 views 32896 37964 Получили game='R', attempt=4
+INFO 2024-02-10 21:45:53,130 views 32896 37964  функция game_form вернула <!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Блог</title>
+</head>
+<body>
+
+<form action="" method="post">
+<input type="hidden" name="csrfmiddlewaretoken" value="AiqpssW2y39YoZlZs5DZhsmusIB6psgNxRxHATebVgtwpzM4yCzANHeIrVIY4I8p">
+<p>
+    <label for="id_game">Game:</label>
+    <select name="game" id="id_game">
+  <option value="C">Coin</option>
+
+  <option value="R" selected>Rnd</option>
+
+  <option value="D">Dice</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_attempts">Attempts:</label>
+    <input type="number" name="attempts" value="4" min="1" max="50" required id="id_attempts">
+    
+    
+      
+    
+  </p>
+<input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
+INFO 2024-02-10 21:45:53,133 basehttp 32896 37964 "POST /rnd/game/ HTTP/1.1" 200 731
+INFO 2024-02-10 21:46:51,917 autoreload 32896 36976 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 21:46:52,867 autoreload 37988 37080 Watching for file changes with StatReloader
+INFO 2024-02-10 21:47:00,075 views 37988 16824 Получили game='D', attempt=6
+ERROR 2024-02-10 21:47:00,121 log 37988 16824 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 14, in wrapper
+    logger.info(f' функция {view.__name__} вернула {res.content.decode("utf-8")}')
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'content'
+ERROR 2024-02-10 21:47:00,121 basehttp 37988 16824 "POST /rnd/game/ HTTP/1.1" 500 69826
+INFO 2024-02-10 21:48:04,535 autoreload 37988 37080 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 21:48:05,661 autoreload 27288 33044 Watching for file changes with StatReloader
+INFO 2024-02-10 21:48:06,771 views 27288 16748 Получили game='D', attempt=6
+INFO 2024-02-10 21:48:06,788 views 27288 16748  функция game_form вернула <!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Блог</title>
+</head>
+<body>
+
+<form action="" method="post">
+<input type="hidden" name="csrfmiddlewaretoken" value="D1I6Imw71QcvbHMdbNWK3ZGMWcfYXjBWAAPoQNOgo3w3chdihkSlzey0VpmQCzty">
+<p>
+    <label for="id_game">Game:</label>
+    <select name="game" id="id_game">
+  <option value="C">Coin</option>
+
+  <option value="R">Rnd</option>
+
+  <option value="D" selected>Dice</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_attempts">Attempts:</label>
+    <input type="number" name="attempts" value="6" min="1" max="50" required id="id_attempts">
+    
+    
+      
+    
+  </p>
+<input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
+INFO 2024-02-10 21:48:06,789 basehttp 27288 16748 "POST /rnd/game/ HTTP/1.1" 200 731
+INFO 2024-02-10 21:48:31,270 views 27288 16748 Получили game='D', attempt=8
+INFO 2024-02-10 21:48:31,270 views 27288 16748  функция game_form вернула <!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Блог</title>
+</head>
+<body>
+
+<form action="" method="post">
+<input type="hidden" name="csrfmiddlewaretoken" value="4PTB0jRnJApMT5EEGI4KfRewt3qiQweK1o0T8K9w6NJkUF5JMf0lL66KsgxavM6m">
+<p>
+    <label for="id_game">Game:</label>
+    <select name="game" id="id_game">
+  <option value="C">Coin</option>
+
+  <option value="R">Rnd</option>
+
+  <option value="D" selected>Dice</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_attempts">Attempts:</label>
+    <input type="number" name="attempts" value="8" min="1" max="50" required id="id_attempts">
+    
+    
+      
+    
+  </p>
+<input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
+INFO 2024-02-10 21:48:31,270 basehttp 27288 16748 "POST /rnd/game/ HTTP/1.1" 200 731
+INFO 2024-02-10 21:49:58,804 autoreload 27288 33044 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 21:49:59,691 autoreload 30688 30136 Watching for file changes with StatReloader
+INFO 2024-02-10 21:50:15,469 views 30688 38416 Получили game='C', attempt=12
+ERROR 2024-02-10 21:50:15,516 log 30688 38416 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 14, in wrapper
+    logger.info(f' функция {view.__name__} вернула {res.content.decode("utf-8")}')
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'content'
+ERROR 2024-02-10 21:50:15,528 basehttp 30688 38416 "POST /rnd/game/ HTTP/1.1" 500 69827
+INFO 2024-02-10 21:55:23,832 autoreload 30688 30136 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 21:55:24,803 autoreload 36416 38856 Watching for file changes with StatReloader
+INFO 2024-02-10 21:55:27,183 views 36416 38692 Получили game='C', attempt=12
+ERROR 2024-02-10 21:55:27,238 log 36416 38692 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 13, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 59, in game_form
+    orel(attempt)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 13, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: orel() missing 1 required positional argument: 'num'
+ERROR 2024-02-10 21:55:27,238 basehttp 36416 38692 "POST /rnd/game/ HTTP/1.1" 500 77663
+INFO 2024-02-10 21:56:14,679 autoreload 36416 38856 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 21:56:15,757 autoreload 35332 37736 Watching for file changes with StatReloader
+INFO 2024-02-10 21:56:17,047 views 35332 33428 Получили game='C', attempt=12
+INFO 2024-02-10 21:56:17,062 views 35332 33428  функция orel вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>орел-решка</title>
+</head>
+<body>
+<h2>Результаты игры орел-решка</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: решка</li>
+
+<li>Бросок 2 выдал: орел</li>
+
+<li>Бросок 3 выдал: орел</li>
+
+<li>Бросок 4 выдал: решка</li>
+
+<li>Бросок 5 выдал: решка</li>
+
+<li>Бросок 6 выдал: орел</li>
+
+<li>Бросок 7 выдал: решка</li>
+
+<li>Бросок 8 выдал: орел</li>
+
+<li>Бросок 9 выдал: решка</li>
+
+<li>Бросок 10 выдал: решка</li>
+
+<li>Бросок 11 выдал: орел</li>
+
+<li>Бросок 12 выдал: орел</li>
+
+</ul>
+
+
+</body>
+</html>
+ERROR 2024-02-10 21:56:17,126 log 35332 33428 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 14, in wrapper
+    logger.info(f' функция {view.__name__} вернула {res.content.decode("utf-8")}')
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'content'
+ERROR 2024-02-10 21:56:17,126 basehttp 35332 33428 "POST /rnd/game/ HTTP/1.1" 500 69827
+INFO 2024-02-10 21:57:20,266 autoreload 35332 37736 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 21:57:21,392 autoreload 29016 28432 Watching for file changes with StatReloader
+INFO 2024-02-10 21:57:21,688 views 29016 24596 Получили game='C', attempt=12
+INFO 2024-02-10 21:57:21,697 views 29016 24596  функция orel вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>орел-решка</title>
+</head>
+<body>
+<h2>Результаты игры орел-решка</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: решка</li>
+
+<li>Бросок 2 выдал: решка</li>
+
+<li>Бросок 3 выдал: решка</li>
+
+<li>Бросок 4 выдал: решка</li>
+
+<li>Бросок 5 выдал: орел</li>
+
+<li>Бросок 6 выдал: орел</li>
+
+<li>Бросок 7 выдал: орел</li>
+
+<li>Бросок 8 выдал: решка</li>
+
+<li>Бросок 9 выдал: решка</li>
+
+<li>Бросок 10 выдал: решка</li>
+
+<li>Бросок 11 выдал: решка</li>
+
+<li>Бросок 12 выдал: решка</li>
+
+</ul>
+
+
+</body>
+</html>
+ERROR 2024-02-10 21:57:21,731 log 29016 24596 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 14, in wrapper
+    logger.info(f' функция {view.__name__} вернула {res.content.decode("utf-8")}')
+                                                    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'content'
+ERROR 2024-02-10 21:57:21,742 basehttp 29016 24596 "POST /rnd/game/ HTTP/1.1" 500 69827
+INFO 2024-02-10 23:37:45,939 autoreload 29016 28432 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 23:37:46,507 autoreload 29644 35260 Watching for file changes with StatReloader
+INFO 2024-02-10 23:37:48,239 views 29644 28804 Получили game='C', attempt=12
+INFO 2024-02-10 23:37:48,249 views 29644 28804  функция orel вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>орел-решка</title>
+</head>
+<body>
+<h2>Результаты игры орел-решка</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: орел</li>
+
+<li>Бросок 2 выдал: орел</li>
+
+<li>Бросок 3 выдал: орел</li>
+
+<li>Бросок 4 выдал: орел</li>
+
+<li>Бросок 5 выдал: решка</li>
+
+<li>Бросок 6 выдал: орел</li>
+
+<li>Бросок 7 выдал: орел</li>
+
+<li>Бросок 8 выдал: орел</li>
+
+<li>Бросок 9 выдал: орел</li>
+
+<li>Бросок 10 выдал: решка</li>
+
+<li>Бросок 11 выдал: орел</li>
+
+<li>Бросок 12 выдал: орел</li>
+
+</ul>
+
+
+</body>
+</html>
+ERROR 2024-02-10 23:37:48,274 log 29644 28804 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view sem2_app.views.game_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-02-10 23:37:48,275 basehttp 29644 28804 "POST /rnd/game/ HTTP/1.1" 500 70054
+INFO 2024-02-10 23:38:12,675 autoreload 29644 35260 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 23:38:13,310 autoreload 2740 38892 Watching for file changes with StatReloader
+INFO 2024-02-10 23:38:14,681 views 2740 29464 Получили game='C', attempt=12
+ERROR 2024-02-10 23:38:14,711 log 2740 29464 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 58, in game_form
+    orel(attempt)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 13, in wrapper
+    res = view(request, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: orel() missing 1 required positional argument: 'num'
+ERROR 2024-02-10 23:38:14,711 basehttp 2740 29464 "POST /rnd/game/ HTTP/1.1" 500 73622
+INFO 2024-02-10 23:38:44,501 autoreload 2740 38892 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 23:38:45,000 autoreload 35036 35700 Watching for file changes with StatReloader
+INFO 2024-02-10 23:38:46,476 views 35036 32668 Получили game='C', attempt=12
+ERROR 2024-02-10 23:38:46,500 log 35036 32668 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py", line 58, in game_form
+    orel(num=attempt)
+TypeError: log.<locals>.wrapper() missing 1 required positional argument: 'request'
+ERROR 2024-02-10 23:38:46,500 basehttp 35036 32668 "POST /rnd/game/ HTTP/1.1" 500 69794
+INFO 2024-02-10 23:39:07,959 autoreload 35036 35700 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-10 23:39:08,455 autoreload 18124 38416 Watching for file changes with StatReloader
+INFO 2024-02-10 23:39:09,436 views 18124 1524 Получили game='C', attempt=12
+INFO 2024-02-10 23:39:09,456 views 18124 1524  функция orel вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>орел-решка</title>
+</head>
+<body>
+<h2>Результаты игры орел-решка</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: орел</li>
+
+<li>Бросок 2 выдал: орел</li>
+
+<li>Бросок 3 выдал: решка</li>
+
+<li>Бросок 4 выдал: орел</li>
+
+<li>Бросок 5 выдал: решка</li>
+
+<li>Бросок 6 выдал: орел</li>
+
+<li>Бросок 7 выдал: решка</li>
+
+<li>Бросок 8 выдал: орел</li>
+
+<li>Бросок 9 выдал: решка</li>
+
+<li>Бросок 10 выдал: орел</li>
+
+<li>Бросок 11 выдал: орел</li>
+
+<li>Бросок 12 выдал: решка</li>
+
+</ul>
+
+
+</body>
+</html>
+ERROR 2024-02-10 23:39:09,485 log 18124 1524 Internal Server Error: /rnd/game/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view sem2_app.views.game_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-02-10 23:39:09,486 basehttp 18124 1524 "POST /rnd/game/ HTTP/1.1" 500 70054
+INFO 2024-02-11 13:43:23,778 autoreload 18124 38416 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-11 13:43:24,416 autoreload 3804 29672 Watching for file changes with StatReloader
+INFO 2024-02-11 13:47:30,677 autoreload 3804 29672 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-11 13:47:31,197 autoreload 36148 20524 Watching for file changes with StatReloader
+INFO 2024-02-11 13:47:34,983 views 36148 40528 Получили game='C', attempt=12
+INFO 2024-02-11 13:47:34,995 views 36148 40528  функция orel вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>орел-решка</title>
+</head>
+<body>
+<h2>Результаты игры орел-решка</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: решка</li>
+
+<li>Бросок 2 выдал: решка</li>
+
+<li>Бросок 3 выдал: решка</li>
+
+<li>Бросок 4 выдал: решка</li>
+
+<li>Бросок 5 выдал: решка</li>
+
+<li>Бросок 6 выдал: решка</li>
+
+<li>Бросок 7 выдал: орел</li>
+
+<li>Бросок 8 выдал: орел</li>
+
+<li>Бросок 9 выдал: орел</li>
+
+<li>Бросок 10 выдал: решка</li>
+
+<li>Бросок 11 выдал: орел</li>
+
+<li>Бросок 12 выдал: орел</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-11 13:47:34,996 basehttp 36148 40528 "POST /rnd/game/ HTTP/1.1" 200 779
+INFO 2024-02-11 13:47:44,946 autoreload 36148 20524 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\views.py changed, reloading.
+INFO 2024-02-11 13:47:45,483 autoreload 31732 18420 Watching for file changes with StatReloader
+INFO 2024-02-11 13:47:54,357 views 31732 39068 Получили game='R', attempt=20
+INFO 2024-02-11 13:47:54,366 views 31732 39068  функция rnd_ вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>случайные числа</title>
+</head>
+<body>
+<h2>Результаты игры случайные числа</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: 87</li>
+
+<li>Бросок 2 выдал: 83</li>
+
+<li>Бросок 3 выдал: 7</li>
+
+<li>Бросок 4 выдал: 85</li>
+
+<li>Бросок 5 выдал: 58</li>
+
+<li>Бросок 6 выдал: 100</li>
+
+<li>Бросок 7 выдал: 39</li>
+
+<li>Бросок 8 выдал: 44</li>
+
+<li>Бросок 9 выдал: 32</li>
+
+<li>Бросок 10 выдал: 90</li>
+
+<li>Бросок 11 выдал: 14</li>
+
+<li>Бросок 12 выдал: 28</li>
+
+<li>Бросок 13 выдал: 53</li>
+
+<li>Бросок 14 выдал: 48</li>
+
+<li>Бросок 15 выдал: 20</li>
+
+<li>Бросок 16 выдал: 97</li>
+
+<li>Бросок 17 выдал: 60</li>
+
+<li>Бросок 18 выдал: 90</li>
+
+<li>Бросок 19 выдал: 96</li>
+
+<li>Бросок 20 выдал: 22</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-11 13:47:54,368 basehttp 31732 39068 "POST /rnd/game/ HTTP/1.1" 200 1041
+INFO 2024-02-11 13:48:00,068 views 31732 39068 Получили game='D', attempt=20
+INFO 2024-02-11 13:48:00,070 views 31732 39068  функция dice вернула <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>кубики</title>
+</head>
+<body>
+<h2>Результаты игры кубики</h2>
+
+<ul>
+
+<li>Бросок 1 выдал: 6</li>
+
+<li>Бросок 2 выдал: 2</li>
+
+<li>Бросок 3 выдал: 5</li>
+
+<li>Бросок 4 выдал: 3</li>
+
+<li>Бросок 5 выдал: 1</li>
+
+<li>Бросок 6 выдал: 5</li>
+
+<li>Бросок 7 выдал: 3</li>
+
+<li>Бросок 8 выдал: 1</li>
+
+<li>Бросок 9 выдал: 3</li>
+
+<li>Бросок 10 выдал: 4</li>
+
+<li>Бросок 11 выдал: 5</li>
+
+<li>Бросок 12 выдал: 1</li>
+
+<li>Бросок 13 выдал: 3</li>
+
+<li>Бросок 14 выдал: 4</li>
+
+<li>Бросок 15 выдал: 2</li>
+
+<li>Бросок 16 выдал: 1</li>
+
+<li>Бросок 17 выдал: 5</li>
+
+<li>Бросок 18 выдал: 5</li>
+
+<li>Бросок 19 выдал: 6</li>
+
+<li>Бросок 20 выдал: 6</li>
+
+</ul>
+
+
+</body>
+</html>
+INFO 2024-02-11 13:48:00,071 basehttp 31732 39068 "POST /rnd/game/ HTTP/1.1" 200 987
+INFO 2024-02-11 13:48:28,983 autoreload 31732 18420 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\sem2_app\forms.py changed, reloading.
+INFO 2024-02-11 13:48:29,554 autoreload 32128 34624 Watching for file changes with StatReloader
+INFO 2024-02-11 14:21:09,657 autoreload 31708 38628 Watching for file changes with StatReloader
+INFO 2024-02-11 14:22:47,028 autoreload 40152 10456 Watching for file changes with StatReloader
+INFO 2024-02-11 14:23:14,759 basehttp 40152 35872 "GET /articles/author/ HTTP/1.1" 200 1051
+INFO 2024-02-11 14:23:28,481 basehttp 40152 35872 "GET /articles/author/ HTTP/1.1" 200 1051
+INFO 2024-02-11 14:26:31,970 autoreload 40152 10456 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 14:26:32,428 autoreload 25436 27080 Watching for file changes with StatReloader
+INFO 2024-02-11 14:26:48,048 autoreload 25436 27080 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 14:26:48,637 autoreload 35680 37280 Watching for file changes with StatReloader
+INFO 2024-02-11 14:26:51,948 basehttp 35680 40060 "GET /articles/author/ HTTP/1.1" 200 1215
+INFO 2024-02-11 14:29:06,536 autoreload 35680 37280 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 14:29:07,158 autoreload 37432 29008 Watching for file changes with StatReloader
+INFO 2024-02-11 14:29:10,359 basehttp 37432 40760 "GET /articles/author/ HTTP/1.1" 200 1206
+ERROR 2024-02-11 14:29:46,713 log 37432 40760 Internal Server Error: /articles/author/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 33, in author_input
+    author = Author(name=name, secondname=secondname, email=email, bio=bio,birthday=birthday,fullname=fullname)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'name'
+ERROR 2024-02-11 14:29:46,713 basehttp 37432 40760 "POST /articles/author/ HTTP/1.1" 500 71675
+INFO 2024-02-11 14:32:32,771 autoreload 37432 29008 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 14:32:33,268 autoreload 37536 40600 Watching for file changes with StatReloader
+ERROR 2024-02-11 14:32:40,490 log 37536 25276 Internal Server Error: /articles/author/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view blog_app.views.author_input didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-02-11 14:32:40,491 basehttp 37536 25276 "POST /articles/author/ HTTP/1.1" 500 70552
+INFO 2024-02-11 14:33:14,736 autoreload 37536 40600 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 14:33:15,315 autoreload 36004 10344 Watching for file changes with StatReloader
+INFO 2024-02-11 14:33:17,371 basehttp 36004 36000 "POST /articles/author/ HTTP/1.1" 200 1261
+INFO 2024-02-11 14:34:14,204 basehttp 36004 36000 "POST /articles/author/ HTTP/1.1" 200 1281
+INFO 2024-02-11 15:13:30,160 autoreload 36004 10344 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 15:13:30,751 autoreload 34360 33812 Watching for file changes with StatReloader
+INFO 2024-02-11 15:14:32,422 autoreload 34360 33812 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 15:14:32,903 autoreload 38560 37720 Watching for file changes with StatReloader
+INFO 2024-02-11 15:16:17,799 autoreload 38560 37720 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 15:16:18,373 autoreload 21080 40500 Watching for file changes with StatReloader
+INFO 2024-02-11 15:18:09,393 autoreload 21080 40500 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 15:18:09,900 autoreload 40596 17688 Watching for file changes with StatReloader
+INFO 2024-02-11 15:19:23,922 autoreload 40596 17688 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 15:19:24,420 autoreload 26904 25892 Watching for file changes with StatReloader
+INFO 2024-02-11 15:20:56,880 autoreload 26904 25892 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 15:20:57,340 autoreload 10032 40072 Watching for file changes with StatReloader
+INFO 2024-02-11 15:21:05,845 basehttp 10032 38792 "GET /articles/author1/ HTTP/1.1" 200 369
+INFO 2024-02-11 15:24:03,535 autoreload 10032 40072 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 15:24:04,029 autoreload 25092 32756 Watching for file changes with StatReloader
+INFO 2024-02-11 15:26:57,576 basehttp 25092 38616 "GET /articles/author1/ HTTP/1.1" 200 369
+INFO 2024-02-11 15:27:29,195 basehttp 25092 38616 "GET /articles/author1/ HTTP/1.1" 200 369
+INFO 2024-02-11 15:29:52,091 autoreload 25092 32756 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 15:29:52,645 autoreload 26472 29500 Watching for file changes with StatReloader
+ERROR 2024-02-11 15:29:54,761 log 26472 35288 Internal Server Error: /articles/author1/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 54, in author_input_1
+    form = AuthorForm1()
+           ^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\forms\models.py", line 359, in __init__
+    raise ValueError("ModelForm has no model class specified.")
+ValueError: ModelForm has no model class specified.
+ERROR 2024-02-11 15:29:54,763 basehttp 26472 35288 "GET /articles/author1/ HTTP/1.1" 500 73911
+INFO 2024-02-11 15:32:39,282 autoreload 26472 29500 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 15:32:39,902 autoreload 21788 41664 Watching for file changes with StatReloader
+INFO 2024-02-11 15:32:48,876 basehttp 21788 36396 "GET /articles/author1/ HTTP/1.1" 200 1106
+INFO 2024-02-11 15:33:16,210 basehttp 21788 36396 "POST /articles/author1/ HTTP/1.1" 200 1196
+INFO 2024-02-11 15:42:15,910 autoreload 21788 41664 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 15:42:16,446 autoreload 35304 28492 Watching for file changes with StatReloader
+INFO 2024-02-11 15:42:22,656 basehttp 35304 31184 "GET /articles/author/ HTTP/1.1" 200 369
+INFO 2024-02-11 15:42:51,753 autoreload 35304 28492 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 15:42:52,225 autoreload 29500 37300 Watching for file changes with StatReloader
+INFO 2024-02-11 15:42:52,504 basehttp 29500 35796 "GET /articles/author/ HTTP/1.1" 200 1206
+INFO 2024-02-11 15:42:58,245 basehttp 29500 35796 "POST /articles/author/ HTTP/1.1" 200 381
+INFO 2024-02-11 15:55:47,342 autoreload 29500 37300 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 15:55:47,898 autoreload 41156 36204 Watching for file changes with StatReloader
+INFO 2024-02-11 16:00:59,381 autoreload 41156 36204 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:00:59,844 autoreload 39092 4192 Watching for file changes with StatReloader
+INFO 2024-02-11 16:02:15,809 autoreload 37960 28772 Watching for file changes with StatReloader
+INFO 2024-02-11 16:04:30,156 autoreload 37960 28772 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:04:30,623 autoreload 39128 41596 Watching for file changes with StatReloader
+INFO 2024-02-11 16:04:36,351 basehttp 39128 36408 "GET /articles/add/ HTTP/1.1" 200 1106
+INFO 2024-02-11 16:04:55,836 basehttp 39128 36408 "GET /articles/add/ HTTP/1.1" 200 1106
+INFO 2024-02-11 16:05:29,470 autoreload 39128 41596 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 16:05:30,131 autoreload 38956 39584 Watching for file changes with StatReloader
+INFO 2024-02-11 16:05:30,552 basehttp 38956 31060 "GET /articles/add/ HTTP/1.1" 200 1287
+INFO 2024-02-11 16:05:50,712 basehttp 38956 31060 "POST /articles/add/ HTTP/1.1" 200 1507
+INFO 2024-02-11 16:06:55,567 autoreload 38956 39584 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:06:56,107 autoreload 30736 23324 Watching for file changes with StatReloader
+INFO 2024-02-11 16:06:56,481 basehttp 30736 36352 "GET /articles/add/ HTTP/1.1" 200 1431
+INFO 2024-02-11 16:07:43,511 basehttp 30736 36352 "POST /articles/add/ HTTP/1.1" 200 1536
+INFO 2024-02-11 16:08:32,767 autoreload 30736 23324 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:08:33,277 autoreload 35200 35712 Watching for file changes with StatReloader
+INFO 2024-02-11 16:08:40,960 basehttp 35200 31308 "GET /articles/add/ HTTP/1.1" 200 1431
+INFO 2024-02-11 16:09:29,071 autoreload 35200 35712 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:09:29,585 autoreload 32864 40660 Watching for file changes with StatReloader
+INFO 2024-02-11 16:09:30,100 basehttp 32864 41392 "GET /articles/add/ HTTP/1.1" 200 1431
+INFO 2024-02-11 16:10:18,047 autoreload 32864 40660 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:10:18,517 autoreload 34628 35372 Watching for file changes with StatReloader
+INFO 2024-02-11 16:11:53,981 autoreload 34628 35372 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\models.py changed, reloading.
+INFO 2024-02-11 16:11:54,452 autoreload 31924 35612 Watching for file changes with StatReloader
+INFO 2024-02-11 16:12:00,596 basehttp 31924 39020 "GET /articles/add/ HTTP/1.1" 200 1325
+INFO 2024-02-11 16:12:22,696 basehttp 31924 39020 "POST /articles/add/ HTTP/1.1" 200 1763
+INFO 2024-02-11 16:17:13,857 autoreload 31924 35612 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:17:14,346 autoreload 37776 27192 Watching for file changes with StatReloader
+INFO 2024-02-11 16:17:41,247 autoreload 37776 27192 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:17:41,889 autoreload 27496 24696 Watching for file changes with StatReloader
+INFO 2024-02-11 16:18:17,079 autoreload 27496 24696 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:18:17,569 autoreload 25876 22468 Watching for file changes with StatReloader
+INFO 2024-02-11 16:18:22,532 basehttp 25876 40668 "POST /articles/add/ HTTP/1.1" 200 1763
+INFO 2024-02-11 16:18:24,495 basehttp 25876 40668 "GET /articles/add/ HTTP/1.1" 200 1325
+INFO 2024-02-11 16:18:25,789 basehttp 25876 40668 "GET /articles/add/ HTTP/1.1" 200 1325
+INFO 2024-02-11 16:18:29,274 basehttp 25876 40668 "GET /articles/add/ HTTP/1.1" 200 1325
+INFO 2024-02-11 16:18:46,795 autoreload 25876 22468 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:18:47,344 autoreload 33676 41780 Watching for file changes with StatReloader
+INFO 2024-02-11 16:18:47,951 basehttp 33676 40968 "GET /articles/add/ HTTP/1.1" 200 1464
+INFO 2024-02-11 16:19:07,217 basehttp 33676 40968 "POST /articles/add/ HTTP/1.1" 200 1539
+INFO 2024-02-11 16:20:33,782 basehttp 33676 40968 "GET /articles/article/13/ HTTP/1.1" 200 1692
+INFO 2024-02-11 16:21:13,517 basehttp 33676 40968 "GET /articles/1/ HTTP/1.1" 200 2005
+INFO 2024-02-11 16:21:22,321 basehttp 33676 40968 "GET /articles/article/30/ HTTP/1.1" 200 514
+INFO 2024-02-11 16:30:13,907 autoreload 33676 41780 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:30:14,392 autoreload 33892 41160 Watching for file changes with StatReloader
+INFO 2024-02-11 16:31:29,511 autoreload 33892 41160 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:31:29,988 autoreload 6280 38076 Watching for file changes with StatReloader
+INFO 2024-02-11 16:31:30,468 basehttp 6280 39096 "GET /articles/article/30/ HTTP/1.1" 200 1859
+INFO 2024-02-11 16:32:15,412 autoreload 6280 38076 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 16:32:15,914 autoreload 30556 21220 Watching for file changes with StatReloader
+INFO 2024-02-11 16:32:16,028 basehttp 30556 30872 "GET /articles/article/30/ HTTP/1.1" 200 928
+INFO 2024-02-11 16:32:35,757 autoreload 30556 21220 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 16:32:36,243 autoreload 39780 40572 Watching for file changes with StatReloader
+INFO 2024-02-11 16:32:36,843 basehttp 39780 36120 "GET /articles/article/30/ HTTP/1.1" 200 940
+ERROR 2024-02-11 16:32:57,907 log 39780 36120 Internal Server Error: /articles/article/30/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: blog_app_comment.article_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 23, in post_full
+    form.save()
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\forms\models.py", line 551, in save
+    self.instance.save()
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\models\query.py", line 1845, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: blog_app_comment.article_id
+ERROR 2024-02-11 16:32:57,913 basehttp 39780 36120 "POST /articles/article/30/ HTTP/1.1" 500 159013
+INFO 2024-02-11 16:35:54,667 autoreload 39780 40572 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\forms.py changed, reloading.
+INFO 2024-02-11 16:35:55,220 autoreload 39224 37844 Watching for file changes with StatReloader
+INFO 2024-02-11 16:35:58,051 basehttp 39224 40040 "GET /articles/article/30/ HTTP/1.1" 200 1444
+ERROR 2024-02-11 16:36:04,012 log 39224 40040 Internal Server Error: /articles/article/30/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 23, in post_full
+    Comment.objects.create(article_id = article_id, secondname=secondname, email=email, bio=bio, birthday=birthday,
+                                                               ^^^^^^^^^^
+NameError: name 'secondname' is not defined
+ERROR 2024-02-11 16:36:04,012 basehttp 39224 40040 "POST /articles/article/30/ HTTP/1.1" 500 71002
+INFO 2024-02-11 16:42:34,883 autoreload 39224 37844 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 16:42:35,392 autoreload 35820 31896 Watching for file changes with StatReloader
+INFO 2024-02-11 16:42:38,018 basehttp 35820 37088 "GET /articles/article/30/ HTTP/1.1" 200 1444
+ERROR 2024-02-11 16:42:44,182 log 35820 37088 Internal Server Error: /articles/article/30/
+Traceback (most recent call last):
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py", line 25, in post_full
+    author_id = Author.odjects.filter(name=author).values('id')
+                ^^^^^^^^^^^^^^
+AttributeError: type object 'Author' has no attribute 'odjects'
+ERROR 2024-02-11 16:42:44,182 basehttp 35820 37088 "POST /articles/article/30/ HTTP/1.1" 500 71415
+INFO 2024-02-11 16:43:20,092 autoreload 35820 31896 D:\ОБУЧЕНИЕ GEEKBRAINS\DJANGO\prog\seminar\myproject\blog_app\views.py changed, reloading.
+INFO 2024-02-11 16:43:20,575 autoreload 40740 25296 Watching for file changes with StatReloader
+INFO 2024-02-11 16:43:22,494 basehttp 40740 41716 "POST /articles/article/30/ HTTP/1.1" 200 1850
+INFO 2024-02-11 16:43:38,109 basehttp 40740 41716 "POST /articles/article/30/ HTTP/1.1" 200 2292
+INFO 2024-02-11 16:43:56,287 basehttp 40740 41716 "POST /articles/article/30/ HTTP/1.1" 200 2660
+INFO 2024-02-11 16:48:00,807 basehttp 40740 41716 "GET /articles/article/1/ HTTP/1.1" 200 2070
+INFO 2024-02-11 16:48:10,509 basehttp 40740 41716 "POST /articles/article/1/ HTTP/1.1" 200 2479

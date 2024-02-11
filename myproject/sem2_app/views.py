@@ -3,6 +3,7 @@ import random
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import ChooseGame
 
 logger = logging.getLogger(__name__)
 
@@ -44,3 +45,21 @@ def rnd_(request, num):
 
 def rnd(start, stop):
     return random.randint(start, stop)
+
+
+def game_form(request):
+    if request.method == 'POST':
+        form = ChooseGame(request.POST)
+        if form.is_valid():
+            game = form.cleaned_data['game']
+            attempt = form.cleaned_data['attempts']
+            logger.info(f'Получили {game=}, {attempt=}')
+            if game == "C":
+                return orel(request, num=attempt)
+            elif game == "D":
+                return dice(request, num=attempt)
+            elif game == "R":
+                return rnd_(request, num=attempt)
+    else:
+        form = ChooseGame()
+        return render(request, 'sem2_app/game_form.html', {'form': form})

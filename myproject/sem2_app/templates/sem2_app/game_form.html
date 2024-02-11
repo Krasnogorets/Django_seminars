@@ -1,0 +1,8 @@
+{% extends 'sem2_app/base.html' %}
+{% block content %}
+<form action="" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Отправить">
+</form>
+{% endblock %}
