@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('sem1_app.urls')),
     path('rnd/', include('sem2_app.urls')),
     path('articles/', include('blog_app.urls')),
+
 ]

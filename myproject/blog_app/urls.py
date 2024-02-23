@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -7,4 +7,5 @@ urlpatterns = [
     path('author/', views.author_input, name='author_input'),
     path('author1/', views.author_input_1, name='author_input_1'),
     path('add/', views.article_input, name='article_input'),
+
 ]

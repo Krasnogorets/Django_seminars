@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 import logging
 import django.utils.log
 import logging.handlers
@@ -22,16 +23,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l4!l!5m0)06#su2vqe6y*gb%kw2vxt*((6k__+kl*upqao+(df'
+SECRET_KEY = os.getenv('SECRET_KEY')
+
+# 'django-insecure-l4!l!5m0)06#su2vqe6y*gb%kw2vxt*((6k__+kl*upqao+(df'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  '192.168.56.1',
-                 '192.168.1.68']
+                 '192.168.1.68',
+                 'seminarfinalgb.pythonanywhere.com',
+                 ]
 
 # Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,6 +53,7 @@ INSTALLED_APPS = [
     'sem2_app',
     'sem2_1_app',
     'blog_app',
+
 ]
 
 MIDDLEWARE = [
@@ -80,10 +90,23 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'seminarfinalgb$default',
+        'USER': 'seminarfinalgb',
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'HOST': 'seminarfinalgb.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'init_command': "SET NAMES 'utf8mb4';SETsql_mode = 'STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4', },
     }
 }
 
@@ -108,7 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -126,35 +149,37 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {'verbose': {'format': '{levelname} {asctime} {module} {process} {thread} {message}',
-                               'style': '{',
-                               },
-                   'simple': {
-                       'format': '%(levelname)s %(message)s'}, },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',  # добавлен параметр formatter
-        },
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': './log/django.log',
-            'formatter': 'verbose',  # добавлен параметр formatter
-            'encoding': 'utf-8',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
-        },
-        'sem2_app': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-    },
-}
+STATIC_ROOT = BASE_DIR / 'static/'
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {'verbose': {'format': '{levelname} {asctime} {module} {process} {thread} {message}',
+#                                'style': '{',
+#                                },
+#                    'simple': {
+#                        'format': '%(levelname)s %(message)s'}, },
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'verbose',  # добавлен параметр formatter
+#         },
+#         'file': {
+#             'class': 'logging.FileHandler',
+#             'filename': './log/django.log',
+#             'formatter': 'verbose',  # добавлен параметр formatter
+#             'encoding': 'utf-8',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console', 'file'],
+#             'level': 'INFO',
+#         },
+#         'sem2_app': {
+#             'handlers': ['console', 'file'],
+#             'level': 'INFO',
+#             'propagate': True,
+#         },
+#     },
+# }
